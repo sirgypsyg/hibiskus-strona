@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌺 Hibiskus — Kompletny Przewodnik</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #f0f0f0;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(to bottom, rgba(255,0,128,0.15), transparent);
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            background: linear-gradient(135deg, #ff6b6b, #ff1493, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        
+        .flower-emoji {
+            font-size: 6rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .card h2 {
+            color: #ff69b4;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card p {
+            line-height: 1.8;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .gallery-item {
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.12);
+        }
+        
+        .gallery-item .emoji {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .gallery-item h3 {
+            color: #ff6b6b;
+            margin-bottom: 8px;
+        }
+        
+        .gallery-item p {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .care-item {
+            background: linear-gradient(135deg, rgba(255,107,107,0.2), rgba(255,105,180,0.1));
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .care-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .care-item h3 {
+            color: #ff6b6b;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .care-item p {
+            font-size: 0.85rem;
+            color: #bbb;
+        }
+        
+        .fact-box {
+            background: linear-gradient(135deg, rgba(0,255,127,0.15), rgba(0,206,209,0.1));
+            border-left: 4px solid #00ff7f;
+            padding: 20px;
+            border-radius: 0 15px 15px 0;
+            margin: 20px 0;
+        }
+        
+        .fact-box h3 {
+            color: #00ff7f;
+            margin-bottom: 10px;
+        }
+        
+        .colors-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .color-chip {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        
+        .color-chip:hover {
+            transform: scale(1.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #ff69b4;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .care-grid { grid-template-columns: 1fr; }
+            .flower-emoji { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="flower-emoji">🌺</div>
+        <h1>Hibiskus</h1>
+        <p>Kompletny przewodnik po królowej kwiatów</p>
+    </div>
+    
+    <div class="content">
+        <div class="card">
+            <h2>🌸 O Hibiskusie</h2>
+            <p>
+                <strong>Hibiskus</strong> (Hibiscus rosa-sinensis) to jedna z najpopularniejszych roślin ozdobnych na świecie. 
+                Pochodzi z Azji Wschodniej, ale obecnie uprawiana jest praktycznie wszędzie — od tropików po chłodniejsze strefy klimatyczne.
+            </p>
+            <p>
+                Nazwa "rosa-sinensis" oznacza "róża chińska" — i rzeczywiście, hibiskus zachwyca podobnie jak róże, 
+                ale jest znacznie łatwiejszy w uprawie. Kwiaty mogą osiągać średnicę nawet 20 cm!
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>🎨 Odmiany Kolorystyczne</h2>
+            <p>Hibiskus występuje w niesamowitej różnorodności kolorów. Oto najpopularniejsze:</p>
+            <div class="colors-section">
+                <div class="color-chip" style="background: #ff0000;" title="Czerwony"></div>
+                <div class="color-chip" style="background: #ff69b4; color: #333;" title="Różowy"></div>
+                <div class="color-chip" style="background: #ffa500;" title="Pomarańczowy"></div>
+                <div class="color-chip" style="background: #ffff00; color: #333;" title="Żółty"></div>
+                <div class="color-chip" style="background: #ffffff; color: #333;" title="Biały"></div>
+                <div class="color-chip" style="background: linear-gradient(45deg, #ff0000, #ff8c00, #ffeb3b); color: #333;" title="Wielobarwny">🌈</div>
+                <div class="color-chip" style="background: #8b0000;" title="Bordowy"></div>
+                <div class="color-chip" style="background: linear-gradient(135deg, #ff6b6b, #c0392b);" title="Łososiowy">🐟</div>
+            </div>
+            <p style="text-align: center; color: #888; margin-top: 15px;">
+                💡 Każdy kwiat hibiskusa żyje tylko 1-2 dni, ale roślina stale produkuje nowe pąki!
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>☀️ Pielęgnacja krok po kroku</h2>
+            <div class="care-grid">
+                <div class="care-item">
+                    <div class="icon">☀️</div>
+                    <h3>Światło</h3>
+                    <p>Minimum 6h jasnego światła dziennie. Lubi bezpośrednie słońce!</p>
+                </div>
+                <div class="care-item">
+                    <div class="icon">💧</div>
+                    <h3>Podlewanie</h3>
+                    <p>Regularne, gdy wierzch ziemi wyschnie. Uważaj na przelanie!</p>
+                </div>
+                <div class="care-item">
+                    <div class="icon">🌡️</div>
+                    <h3>Temperatura</h3>
+                    <p>Idealnie 18-25°C. Nie lubi przeciągów i mrozu poniżej 10°C.</p>
+                </div>
+                <div class="care-item">
+                    <div class="icon">🌱</div>
+                    <h3>Gleba</h3>
+                    <p>Przepuszczalna, lekko kwaśna. Dodaj perlit dla drenażu.</p>
+                </div>
+                <div class="care-item">
+                    <div class="icon">✂️</div>
+                    <h3>Przycinanie</h3>
+                    <p>Wczesna wiosna. Stymuluje kwitnienie i wzrost.</p>
+                </div>
+                <div class="care-item">
+                    <div class="icon">🧪</div>
+                    <h3>Nawożenie</h3>
+                    <p>W sezonie co 2 tygodnie nawozem dla roślin kwitnących.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fact-box">
+            <h3>🌺 Czy wiesz, że...?</h3>
+            <p>
+                • W niektórych krajach hibiskus jest spożywany — herbata z hibiskusa (karkade) jest popularna w Egipcie i Sudanie!<br>
+                • W Malezji hibiskus jest kwiatem narodowym i symbolizuje단 kraj.<br>
+                • Hibiskus może żyć nawet 20-50 lat przy odpowiedniej pielęgnacji!<br>
+                • Jeden kwiat hibiskusa może zapylić się sam — ale owady pomagają w krzyżowaniu odmian.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>🔍 Galeria Odmian</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="emoji">🌺</div>
+                    <h3>China Rose</h3>
+                    <p>Klasyczna czerwona odmiana, najpopularniejsza na świecie</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="emoji">🌸</div>
+                    <h3>Cooper's Hill</h3>
+                    <p>Piękne wielokolorowe liście z różowymi kwiatami</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="emoji">🌺</div>
+                    <h3>Butterfly Hibiscus</h3>
+                    <p>Żółte kwiaty z czerwonym środkiem, delikatna odmiana</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="emoji">🌺</div>
+                    <h3>Double Hibiscus</h3>
+                    <p>Pełne, wielopłatkowe kwiaty przypominające piwonie</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>⚠️ Problemy i rozwiązania</h2>
+            <p><strong>🔴 Liście żółkną:</strong> Może to być za dużo wody, za mało światła lub niedobór żelaza.</p>
+            <p><strong>🔴 Pąki opadają:</strong> Zbyt sucho, zmiana temperatury lub zbyt ciemno.</p>
+            <p><strong>🔴 Brak kwitnienia:</strong> Za mało światła, za dużo azotu w nawozie lub roślina jest zbyt młoda.</p>
+            <p><strong>🔴 Mszyce i przędziorki:</strong> Regularnie przeglądaj liście, stosuj mydło ogrodnicze.</p>
+        </div>
+        
+        <div class="fact-box">
+            <h3>🍵 Hibiskus w kuchni</h3>
+            <p>
+                <strong>Herbata karkade</strong> (napar z hibiskusa) to prawdziwy superfood! 
+                Jest bogata w witaminę C, antyoksydanty i kwasy organiczne. 
+                Można pić ją na gorąco zimą lub schłodzoną latem z dodatkiem miodu i mięty. 
+                Ma piękny rubinowy kolor i orzeźwiający, lekko kwaśny smak.
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>🌺 Strona o hibiskusach | Wykonano z ❤️</p>
+        <p style="margin-top: 10px;">
+            Źródła: <a href="https://pl.wikipedia.org/wiki/Hibiskus" target="_blank">Wikipedia</a> • 
+            <a href="https://www.rhs.org.uk" target="_blank">RHS</a>
+        </p>
+    </footer>
+</body>
+</html>
